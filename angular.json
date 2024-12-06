@@ -2,6 +2,15 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  "i18n": {
+    "sourceLocale": "ru",
+    "locales": {
+      "en": {
+        "translation": "src/locale/messages.en.xlf",
+        "baseHref": "/en/"
+      }
+    }
+  },
   "projects": {
     "sajt": {
       "projectType": "application",
@@ -27,7 +36,8 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -62,6 +72,16 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "ru": {
+              "aot": true,
+              "outputPath": "dist/furniture-website-ru",
+              "localize": ["ru"]
+            },
+            "en": {
+              "aot": true,
+              "outputPath": "dist/furniture-website-en",
+              "localize": ["en"]
             }
           },
           "defaultConfiguration": "production"
@@ -86,7 +106,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
