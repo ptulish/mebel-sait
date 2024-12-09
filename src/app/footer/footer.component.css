@@ -1,0 +1,9 @@
+.footer {
+  background-color: #333; /* Цвет фона */
+  color: white; /* Цвет текста */
+  text-align: center; /* Текст по центру */
+  padding: 10px 0; /* Внутренние отступы */
+  font-size: 14px; /* Размер текста */
+  position: relative; /* Для базовой фиксации */
+  width: 100%; /* На всю ширину */
+}

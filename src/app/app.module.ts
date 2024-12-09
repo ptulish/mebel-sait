@@ -16,9 +16,10 @@ import { HeaderComponent } from './header/header.component';
     HeaderComponent
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [
     provideAnimationsAsync()

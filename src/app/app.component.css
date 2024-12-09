@@ -1,0 +1,79 @@
+/* Общие стили */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5); /* Прозрачный фон */
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header ul li {
+  margin: 0 10px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  height: 100vh; /* Высота экрана */
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: change-bg 15s infinite; /* Анимация смены фона */
+  z-index: -1;
+}
+
+/* Стили разделов */
+section {
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+

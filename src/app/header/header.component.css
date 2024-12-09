@@ -1,0 +1,64 @@
+.header-component {
+  background-color: transparent;
+}
+/* Основные стили для хедера */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white; /* Цвет текста */
+  position: fixed; /* Хедер фиксирован наверху */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+/* Стили для логотипа */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px; /* Размер логотипа */
+  margin-right: 10px; /* Расстояние между логотипом и текстом */
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Стили для кнопок навигации */
+.nav {
+  display: flex;
+  gap: 10px; /* Расстояние между кнопками */
+}
+
+.nav-btn {
+  background-color: var(--accent-color); /* Цвет кнопок */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.nav-btn:hover {
+  background-color: #777; /* Цвет кнопок при наведении */
+}
+@media (max-width: 768px) {
+  .nav-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+}

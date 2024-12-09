@@ -2,15 +2,6 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "i18n": {
-    "sourceLocale": "ru",
-    "locales": {
-      "en": {
-        "translation": "src/locale/messages.en.xlf",
-        "baseHref": "/en/"
-      }
-    }
-  },
   "projects": {
     "sajt": {
       "projectType": "application",
@@ -44,7 +35,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/rose-red.css",
@@ -72,16 +64,6 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
-            },
-            "ru": {
-              "aot": true,
-              "outputPath": "dist/furniture-website-ru",
-              "localize": ["ru"]
-            },
-            "en": {
-              "aot": true,
-              "outputPath": "dist/furniture-website-en",
-              "localize": ["en"]
             }
           },
           "defaultConfiguration": "production"

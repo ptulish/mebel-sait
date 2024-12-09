@@ -1,3 +1,25 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<div class="hero">
+  <app-header></app-header>
+  <div class="hero-content">
+    <h2>Добро пожаловать!</h2>
+    <p>Это описание главной страницы.</p>
+  </div>
+</div>
+<div class="main-content">
+  <router-outlet></router-outlet>
+  <section id="section1">
+    <h2>Раздел 1</h2>
+    <p>Содержимое раздела 1.</p>
+  </section>
+
+  <section id="section2">
+    <h2>Раздел 2</h2>
+    <p>Содержимое раздела 2.</p>
+  </section>
+
+  <section id="section3">
+    <h2>Раздел 3</h2>
+    <p>Содержимое раздела 3.</p>
+  </section>
+</div>
 <app-footer></app-footer>
