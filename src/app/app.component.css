@@ -39,14 +39,6 @@ header ul li a {
   text-decoration: none;
 }
 
-.hero {
-  position: relative;
-  height: 100vh; /* Высота экрана */
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
 
 .hero-content {
   position: absolute;
@@ -57,7 +49,59 @@ header ul li a {
   color: white;
 }
 
-.hero::before {
+
+
+/* Стили разделов */
+section {
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+/*.hero {*/
+/*  position: relative;*/
+/*  height: 100vh;*/
+/*  overflow: hidden;*/
+/*  background-repeat: no-repeat;*/
+/*  background-size: cover;*/
+/*  background-position: center;*/
+/*}*/
+
+/*.hero::before,*/
+/*.hero::after {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  background-size: cover;*/
+/*  background-position: center;*/
+/*  background-repeat: no-repeat;*/
+/*  transition: opacity 1.5s ease-in-out; !* Плавный переход прозрачности *!*/
+/*  z-index: -1;*/
+/*}*/
+
+/*.hero::before {*/
+/*  opacity: 1; !* Изначально видим *!*/
+/*}*/
+
+/*.hero::after {*/
+/*  opacity: 0; !* Скрыт *!*/
+/*}*/
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  --current-image: '';
+  --next-image: '';
+}
+
+.hero::before,
+.hero::after {
   content: '';
   position: absolute;
   top: 0;
@@ -66,14 +110,50 @@ header ul li a {
   height: 100%;
   background-size: cover;
   background-position: center;
-  animation: change-bg 15s infinite; /* Анимация смены фона */
+  background-repeat: no-repeat;
   z-index: -1;
+  transition: opacity 1.5s ease-in-out;
 }
 
-/* Стили разделов */
-section {
-  padding: 50px 20px;
-  min-height: 100vh;
+.hero::before {
+  background-image: var(--current-image);
+  opacity: 1;
+}
+
+.hero::after {
+  background-image: var(--next-image);
+  opacity: 0;
+}
+
+.hero.fade::after {
+  opacity: 1; /* Следующее изображение становится видимым */
+}
+
+.hero.fade::before {
+  opacity: 0; /* Текущее изображение исчезает */
 }
 
 
+/*.hero::before {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  background-size: cover;*/
+/*  background-position: center;*/
+/*  animation: change-bg 15s infinite; !* Анимация смены фона *!*/
+/*  z-index: -1;*/
+/*  transform: scale(1); !* Начальный масштаб *!*/
+/*  transition: transform 5s ease-in-out; !* Плавный переход *!*/
+/*}*/
+
+/*.hero {*/
+/*  position: relative;*/
+/*  height: 100vh; !* Высота экрана *!*/
+/*  overflow: hidden;*/
+/*  background-repeat: no-repeat;*/
+/*  background-size: cover;*/
+/*  background-position: center;*/
+/*}*/
